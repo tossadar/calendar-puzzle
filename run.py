@@ -26,7 +26,7 @@ def main():
                 continue
         calendar_board = Board(input_date, solutions_count)
         all_pieces = [L, N, P, T, U, V, Z, J, I, S]
-        print(f"Seeking for {solutions_count} solutions!")
+        print(f"Looking for {solutions_count} solutions!")
         try:
             solver(calendar_board, all_pieces, solutions_count)
         except DesiredSolutionsFound:

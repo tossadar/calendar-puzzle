@@ -17,7 +17,6 @@ BOARD = [
     [1, 1, 1, 1, 0, 0, 0],
 ]
 
-
 class Board:
     def __init__(self, input_date, solution_count=16):
         self.board = self.generate_board(input_date)
@@ -30,8 +29,8 @@ class Board:
 
     def place_piece(self, piece: Piece):
         height, width = piece.current_shape.data.shape
-        board_x = self.next_position[0] - piece.current_shape.offset
-        board_y = self.next_position[1]
+        board_x = self.next_position[0]
+        board_y = self.next_position[1] - piece.current_shape.offset
         placement_location = np.index_exp[board_x: board_x + height, board_y: board_y + width]
         mask = self.board[placement_location]
         if mask.shape != piece.current_shape.data.shape:
