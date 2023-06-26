@@ -1,5 +1,5 @@
 # Calendar Puzzle
-Simple brutforce algorithm to solve calendar puzzle with following grid:
+Simple backtracking algorithm to solve calendar puzzle with following grid:
 
 ![Puzzle picture](https://github.com/tossadar/calendar-puzzle/blob/master/resources/empty_board.png)
 
